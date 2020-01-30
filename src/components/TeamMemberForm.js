@@ -23,7 +23,7 @@ const TeamMemberForm = props => {
     }, [props.memberToEdit]);
 
     return (
-        <form onSubmit={submitForm}>
+        <form onSubmit={submitForm} style={{display:`flex`, flexDirection:`column`, width:`350px`, margin:`0 auto`}}>
                 <label htmlFor='inputName'>Full Name</label>
                 <input id='inputName'
                     type='text'
@@ -56,7 +56,7 @@ const TeamMemberForm = props => {
                 </select>
      
           
-            <button type='submit'>{
+            <button type='submit' style={{width:`84px`, margin:`32px auto`, padding:`5px`}}>{
                 props.memberToEdit !== ''? 'Submit': 'Add'}</button>
         </form>
     )
